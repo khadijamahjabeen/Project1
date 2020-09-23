@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+/*here I used anchor tag for clear the underline font from whole page*/
+a{
+    text-decoration: none;
+}
+
+/*use here header styling and give here border*/
+header{
+    background: #4f6424;
+/*given here row wise styling to the navigation bar*/
+    display: flex;
+    /*and center the main heading logo or name*/
+    align-items: center;
+    /*here we give whole header a bit balanced look*/
+    padding: 15px 0;
+}
+/*this is the common selector for both social media links and for main links*/
+/*used for unclear all the list style Dots from lists*/
+header ul{
+    list-style: none;
+    /*to inline the links Home About Us and Contact headings*/
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+    /*creating here a common selector for changing the color in whole header area*/
+    header a{
+        color: #fff;
+    }
+#logo{
+    margin: 0 auto;
+    font-size: 30px;
+}
+/*here we give gap between the links or headingsand social links */
+#menu li{
+    padding: 10px;
+}
+#social-links li{
+    padding: 10px;
+}
+/*here we use main id main for side baar*/
+#main{
+    display: flex;
+   
+}
+aside{
+    padding: 10px;
+    flex: 0 0 20vw;
+    background: beige;
+}
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+
+aside ul a{
+/*here we change link or anchor (a) color and space in side bar */
+    color:  #4f6424;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+aside img{
+    width: 100%;
+}
+article{
+    padding: 10px;
+}
+.services-container{
+    display: flex;
+    /*here we use wrap property to actiavte the 50% flex property 
+    in @media query can activate and site will be resposive 
+    when screen will be resize and in service box services equally divided in screen*/
+    flex-wrap: wrap;
+    /*here we use justify conetent to create space between boxes*/
+    justify-content: space-between;
+}
+.service-box{
+    border: 1px solid #eee;
+    flex-basis: 32%;
+    max-width: 370px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+/*using class for CTA buttons */
+.call-to-action{
+    align-self: flex-start;
+    margin-top: auto;
+}
+.call-to-action a{
+    background: grey;
+    
+    border: 2px solid transparent;
+    color: #fff;
+    padding: 8px;
+    display: block;
+}
+.service-box img{
+    width: 100%;
+}
+.service-box h3{
+    margin: 5px 0 10px;
+}
+.service-box p{
+    margin: 0 0 10px;
+}
+
+/*for given the hover effect on buttons*/
+.call-to-action a:hover{
+    color: grey;
+    background: transparent;
+    border: 2px solid grey;
+
+}
+footer{
+    background: #4f6424;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+
+}
+/*using media query for side bar width look see better when site will be resize and also for service box */
+@media screen and (max-width: 850px){
+  .service-box{
+      flex-basis: 48%;
+  }  
+    aside{
+        flex: 0 0 30vw;
+    }
+}
+/*we use another media query for mobile view so can my main headings and page links and social links will be see in center*/
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+    }
+    /*we use order id for see the logo on the top of the header, 
+    for that we use order property*/
+    #logo{
+        order: -1;
+    }
+    /*now will selct id first as main to make following comment successful by making it column*/
+    #main{
+        flex-direction: column;
+    }
+    /*here i want to see in mobile version that the site side bar 
+    comes down and main body shows first, 
+    for that we use first article property to -1 
+    just like we use in logo it gonna fix side bar on right*/
+    article{
+        order: -1;
+    }
+    /*want to see the services box set one by one instead of side by side 
+    in mobile view for that will use serivce container selector*/
+    .services-container{
+        flex-direction: column;
+        /*for removing the space from the right side
+        after setting the column flex direction we use align property center*/
+        align-items: center;
+
+    }
+    /*in the above media query we use heading selector
+     for making heading align center*/
+     h2{
+         text-align: center;
+     }
+}
+
+@import url('https://fonts.google.com/specimen/Josefin+Sans?query=josefin&selection.family=Josefin+Sans:wght@423')
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+    outline: none;
+    font-family: 'Josefin Sans'; sans-serif;
+}
+
+body{
+    
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%,-50%);
+    max-width: 350px;
+    width: 100%;
+    background: #4f6424;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgba(254,236,164,1);
+}   
+
+.wrapper h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #dddbd3;
+}
+
+.wrapper .input_field{
+    margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+.wrapper textarea{
+    height: 80px;
+    resize: none;
+}
+
+.wrapper .btn input[type="submit"]{
+    background-color:#fece0c;
+	border-radius:28px;
+	border:1px solid #181a19;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Josefin Sans'; sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px rgb(180, 129, 35); 
+
+   /* border: 0;
+    margin-top: 15px;
+    padding; 14px 40px;
+    width: 100%;
+    background: #fece0c;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;*/
+}
+.wrapper .btn {
+    width: 100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.wrapper .btn :hover{
+    background-color: #000000
+}
+.wrapper .btn :active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px rgb(107, 204, 94);
+    transform: translateY(4px);
+}
+
+.wrapper #error_message{
+    margin-bottom: 20px;
+    padding: 0px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    /*give the smooth transition effect*/
+    transition: all 0.5s ease;
+}
+
